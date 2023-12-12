@@ -6,7 +6,6 @@ let arrayChats = [
   {
     name: 'Pedro Pablo',
     time: 'Hace 10 minutos',
-    photo: URL('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.lasexta.com%2Fmotor%2Fsupercoches%2Fkoenigsegg-anticipa-imagen-final-futuro-deportivo-mas-rapido-planeta_2022042562670e0e2dc8df00019076af.html&psig=AOvVaw2QwJvn0UNiWUVjxyhJ4vOo&ust=1702419135697000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCICniLy2iIMDFQAAAAAdAAAAABAD')
   },
   {
     name: 'Felipe Pinto 77',
@@ -22,7 +21,9 @@ let arrayChats = [
   }
 ]
 
-/*<img src="../src/img/descarga.jpg" alt="" class="h-16 w-16 rounded-full"> */
+const timeDay = new Date();
+const hours = timeDay.toLocaleString()
+
 
 </script>
 
@@ -34,15 +35,15 @@ let arrayChats = [
       <h2 class="text-center text-gray-300">Perfil</h2>
     </div>
 
-    <div class="bg-red-400 w-[25%] px-10 py-20 font-semibold">
+    <div class="bg-slate-800 w-[25%] px-10 py-20 font-semibold text-white">
       
       <h1 class="text-4xl mb-6">TENDENCIAS</h1>
       <h2 v-for="(i, index) in array" :key="index" class="mt-2">{{ i }}</h2>
       <h1 class="text-2xl mt-24 mb-8">MENSAJES DIRECTOS</h1>
       
-      <div class="bg-red-300 flex py-2 px-2 rounded mb-2" v-for="(e, index) in arrayChats" :key="index">
+      <div class="bg-slate-700 flex py-2 px-2 rounded mb-2 hover:cursor-pointer" v-for="(e, index) in arrayChats" :key="index">
         
-        <div>{{e.photo}}</div>
+        <img src="../src/img/descarga.jpg" alt="" class="h-16 w-16 rounded-full"> 
         
         <div class="ml-3 items-center my-auto" >
           <h2 class="text-3xl">{{ e.name }}</h2>
@@ -54,11 +55,23 @@ let arrayChats = [
 
     </div>
 
-    <div class="bg-blue-300 w-[47%]">
-      y
+    <div class="bg-slate-700 p-8 w-[47%]">
+      
+      <div class="bg-blue-500 h-auto w-auto flex min-w-screen-sm">
+
+        
+        <h1 class="bg-white">hola, espero que estes muy bien y que pasaras un lindo día</h1>
+        
+
+        <div class="items-end">
+          <h1 class="ml-2">{{ hours }}</h1>
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="bg-gray-100 w-[20%]">
+    <div class="bg-slate-900 w-[20%]">
       t
     </div>
 
